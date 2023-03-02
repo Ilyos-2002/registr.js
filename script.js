@@ -1,24 +1,21 @@
-let $elForm = document.getElementById('form');
-let $elBox = document.getElementById('box');
-let $elGender = document.getElementById('gender');
+let $elForm = document.getElementById("form");
+let $elBoxf = document.getElementById("boxf");
+let $elBoxm = document.getElementById("boxm");
+let $elGender = document.getElementById("gender");
 
-
-
-let $elUserLastName = document.getElementById('userLastName');
-let $elUserFirstName = document.getElementById('userFirstName');
-let $elUseEmail = document.getElementById('useEmail');
-let $elUserPhoneNum = document.getElementById('userPhoneNum');
-let $elUserCountry = document.getElementById('userCountry');
-let $elUserCity = document.getElementById('userCity');
-let $elUserGenderMale = document.getElementById('userGenderMale');
-let $elUserGenderFemale = document.getElementById('userGenderFemale');
-let $elUserPassword = document.getElementById('userPassword');
-let $elUserConifirmPassword = document.getElementById('userPasswordConifirm');
-
-
+let $elUserLastName = document.getElementById("userLastName");
+let $elUserFirstName = document.getElementById("userFirstName");
+let $elUseEmail = document.getElementById("useEmail");
+let $elUserPhoneNum = document.getElementById("userPhoneNum");
+let $elUserCountry = document.getElementById("userCountry");
+let $elUserCity = document.getElementById("userCity");
+let $elUserGenderMale = document.getElementById("userGenderMale");
+let $elUserGenderFemale = document.getElementById("userGenderFemale");
+let $elUserPassword = document.getElementById("userPassword");
+let $elUserConifirmPassword = document.getElementById("userPasswordConifirm");
 
 $elForm.addEventListener("submit", function(evt) {
-    evt.preventDefault()
+    evt.preventDefault();
 
     let FirstName = $elUserFirstName.value.trim();
     let LastName = $elUserLastName.value.trim();
@@ -31,6 +28,7 @@ $elForm.addEventListener("submit", function(evt) {
     let Password = $elUserPassword.value.trim();
     let ConifirmPassword = $elUserConifirmPassword.value.trim();
 
+    console.log(GenderMale);
 
     if (Password !== ConifirmPassword) {
         alert("Sizning kodingiz tasdqilanmadi!");
@@ -39,7 +37,7 @@ $elForm.addEventListener("submit", function(evt) {
     }
 
     if (GenderMale == "on") {
-        $elBox.innerHTML += ` 
+        $elBoxm.innerHTML += ` 
     <li class="itemm">
         <p>First Name:${FirstName} </p>
         <p>Last Name:${LastName}</p>
@@ -51,9 +49,8 @@ $elForm.addEventListener("submit", function(evt) {
         <p>Password:${Password}</p>
     </li>
     `;
-
     } else {
-        $elBox.innerHTML += ` 
+        $elBoxf.innerHTML += ` 
     <li class="itemf">
         <p>First Name:${FirstName} </p>
         <p>Last Name:${LastName}</p>
@@ -67,13 +64,6 @@ $elForm.addEventListener("submit", function(evt) {
     `;
     }
 
-
-
-
-
-
-
-
     $elUserFirstName.value = null;
     $elUserLastName.value = null;
     $elUseEmail.value = null;
@@ -84,14 +74,4 @@ $elForm.addEventListener("submit", function(evt) {
     $elUserGenderFemale.value = null;
     $elUserPassword.value = null;
     $elUserConifirmPassword.value = null;
-
-
-
-
-
-
-
-
-
-
 });

@@ -9,63 +9,141 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body></body>
-
-<div class="reg__box">
-    <form class="form" id="form">
-        <h2>Registration</h2>
-        <div class="name">
+<body>
+    <div class="reg__box">
+        <form class="form" id="form">
+            <h2>Registration</h2>
+            <div class="name">
+                <label for="">
+            <input
+              id="userFirstName"
+              class="flex__input"
+              placeholder="First Name"
+              required
+              type="text"
+              minlength="3"
+              maxlength="20"
+            />
+          </label>
+                <label for="">
+            <input
+              id="userLastName"
+              class="flex__input"
+              placeholder="Last Name"
+              required
+              type="text"
+              minlength="3"
+              maxlength="20"
+            />
+          </label>
+            </div>
             <label for="">
-                <input id="userFirstName" class="flex__input" placeholder="First Name" required type="text" minlength="3" maxlength="20" />
-            </label>
+          <input
+            id="useEmail"
+            class="input"
+            placeholder="Email"
+            required
+            type="email"
+          />
+        </label>
             <label for="">
-                <input id="userLastName" class="flex__input" placeholder="Last Name" required type="text" minlength="3" maxlength="20" />
+          <input
+            id="userPhoneNum"
+            class="input"
+            placeholder="Phone Nomber"
+            required
+            type="number"
+            pattern="/^9989[012345789][0-9]{7}$/"
+            minlength="8"
+          />
+        </label>
+            <div class="name">
+                <label for="">
+            <input
+              id="userCountry"
+              class="flex__input"
+              placeholder="Country"
+              required
+              type="text"
+              minlength="3"
+              maxlength="25"
+            />
+          </label>
+                <label for="">
+            <input
+              id="userCity"
+              class="flex__input"
+              placeholder="City"
+              required
+              type="text"
+              minlength="3"
+              maxlength="25"
+            />
+          </label>
+            </div>
+            <div class="gender" id="gender">
+                <h3>Gender:</h3>
+                <span>
+            <label for="userGenderMale">
+              <input
+                id="userGenderMale"
+                class=""
+                name="radio"
+                placeholder=""
+                required
+                type="radio"
+              />
+
+              Male
             </label>
-        </div>
-        <label for="">
-            <input id="useEmail" class="input" placeholder="Email" required type="email" />
-        </label>
-        <label for="">
-            <input id="userPhoneNum" class="input" placeholder="Phone Nomber" required type="number" minlength="8" />
-        </label>
-        <div class="name">
+            <label for="userGenderFemale">
+              <input
+                id="userGenderFemale"
+                class=""
+                name="radio"
+                placeholder=""
+                required
+                type="radio"
+              />
+
+              Female
+            </label>
+          </span>
+            </div>
             <label for="">
-                <input id="userCountry" class="flex__input" placeholder="Country" required type="text" minlength="3" maxlength="25" />
-            </label>
+          <input
+            id="userPassword"
+            class="input"
+            placeholder="Password"
+            required
+            type="password"
+            minlength="8"
+          />
+        </label>
             <label for="">
-                <input id="userCity" class="flex__input" placeholder="City" required type="text" minlength="3" maxlength="25" />
-            </label>
-        </div>
-        <div class="gender" id="gender">
-            <h3>Gender:</h3>
-            <span>
-                <label for="userGenderMale">
-                    <input id="userGenderMale" class="" name="radio" placeholder="" required type="radio" />
-
-                    Male
-                </label>
-                <label for="userGenderFemale">
-                    <input id="userGenderFemale" class="" name="radio" placeholder="" required type="radio" />
-
-                    Female
-                </label>
-            </span>
-        </div>
-        <label for="">
-            <input id="userPassword" class="input" placeholder="Password" required type="password" minlength="8" />
+          <input
+            id="userPasswordConifirm"
+            class="input"
+            placeholder="Conifirm Password"
+            required
+            type="password"
+            minlength="8"
+          />
         </label>
-        <label for="">
-            <input id="userPasswordConifirm" class="input" placeholder="Conifirm Password" required type="password" minlength="8" />
-        </label>
-        <button id="userBtn" class="btn" type="submit">Submit</button>
-    </form>
-</div>
+            <button id="userBtn" class="btn" type="submit">Submit</button>
+        </form>
+    </div>
 
-<ul class="list" id="box">
+    <div class="gender-wrap">
+        <ul class="listm" id="boxm">
+            <p>male</p>
+        </ul>
+        <ul class="listf" id="boxf">
+            <p>female</p>
+        </ul>
+    </div>
 
-
-</ul>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
 
 </html>

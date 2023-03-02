@@ -30,6 +30,7 @@ input {
 }
 
 .reg__box {
+    border-radius: 5px;
     box-shadow: 5px 5px #887e7e;
     width: 340px;
     margin-top: 50px;
@@ -64,6 +65,22 @@ h3 {
     width: 311px;
 }
 
+.gender-wrap {
+    width: 800px;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
 .flex__input {
     width: 140px;
 }
@@ -96,9 +113,17 @@ p {
     background-color: rgb(135, 119, 238);
 }
 
-.list {
-    background-color: aquamarine;
-    margin-left: 200px;
+.listf {
+    background-color: rgb(194, 22, 183);
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.listm {
+    background-color: rgb(45, 210, 155);
     list-style-type: none;
     display: flex;
     align-items: center;
